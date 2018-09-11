@@ -4,6 +4,6 @@
 //more!
 
 int main() {
-	std::cout << "" << "\n";
+	std::cout << "Edited from web..." << "\n";
   return 0;
 }
