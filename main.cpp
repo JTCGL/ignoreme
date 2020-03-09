@@ -4,6 +4,6 @@
 //more!
 
 int main() {
-	std::cout << "Edited from C4droid AND vs!" << "\n";
+	std::cout << "Edited from C4droid AND vs! Dude!" << "\n";
   return 0;
 }
