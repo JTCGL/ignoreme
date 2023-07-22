@@ -3,5 +3,5 @@
 #include <iostream>
 
 void added() {
-	std::cout << "added!";
+	std::cout << "This file was included, and added!";
 }
