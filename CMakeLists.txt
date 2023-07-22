@@ -1,1 +1,1 @@
-#empty CMakeLists
+project(ignoreme)
