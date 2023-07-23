@@ -1,6 +1,6 @@
 #include <iostream>
 #include "added.h"
-#include "glm\glm.hpp"
+#include <glm.hpp>
 
 int main() {
 	glm::vec3 myvec(1.2f, 3.4f, 5.6);
