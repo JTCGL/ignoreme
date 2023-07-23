@@ -11,27 +11,10 @@
 //specific to this
 #include <glm.hpp>
 #include "added.h"
+#include <animal.h>
 
 using namespace std;
 using namespace glm;
-
-struct bbox {
-	vec3 min;
-	vec3 max;
-	//overload '<<' operator ?
-};
-struct id {
-	string name;
-	uint16_t age;
-};
-
-class animal {
-public:
-	animal() {}
-	virtual ~animal() { cout << "animal(dtor)\n"; };
-	virtual void speak() = 0;
-	virtual bbox dim() = 0;
-};
 
 class cat : public animal {
 	public:
