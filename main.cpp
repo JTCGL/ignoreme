@@ -75,6 +75,24 @@ public:
 };
 
 int main() {
+
+/*
+What OS/compiler is this for platform-specific info ?
+https://stackoverflow.com/questions/2989810/which-cross-platform-preprocessor-defines-win32-or-win32-or-win32#26225829
+*/
+
+#if defined(_WINDOWS)
+	#if defined(_WIN64)
+		cout << "std::string size:(win64)" << sizeof(string) << endl;
+	#else
+	#if defined(_WIN32)
+		cout << "std::string size:(win32)" << sizeof(string) << endl;
+	#endif
+	#endif
+#else
+	//unknown os
+	cout << "std::string size:(unknown system)" << sizeof(string) << endl;
+#endif
 	cat mycat("spot", 7);
 	cat mycat2;
 	mycat.speak();
