@@ -1,3 +1,6 @@
+#pragma once
+#ifndef ANIMAL_H
+#define ANIMAL_H
 //STL and common libs
 #include <iostream>
 #include <vector>
@@ -28,3 +31,4 @@ public:
 	virtual void speak() = 0;
 	virtual bbox dim() = 0;
 };
+#endif

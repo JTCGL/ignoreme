@@ -11,51 +11,10 @@
 //specific to this
 #include <glm.hpp>
 #include "added.h"
-#include <animal.h>
+#include <pets.hpp>
 
 using namespace std;
 using namespace glm;
-
-class cat : public animal {
-	public:
-	cat() { cout << "cat(ctor())\n"; }
-	cat(const string namein, const 	uint16_t agein) {
-		thiscat.name = namein;
-		thiscat.age = agein;
-		cout << "cat(ctor(name,age))\n";
-	}
-	~cat() { cout << "cat(dtor)\n"; }
-
-	//copy/move? Want a collection of cats - pets - so be sure to only be checking the original!
-
-	void speak() {
-		cout << "I am a cat! my name is " << thiscat.name << " and I am " << thiscat.age << endl;
-	}
-	bbox dim() {
-		return catbounds;
-	}
-	bbox catbounds{ vec3{-1.f},vec3{1.f} };
-	id thiscat{ "default", 2 };
-};
-
-class dog : public animal {
-public:
-	dog() { cout << "dog(ctor())\n"; }
-	dog(const string namein, const 	uint16_t agein) {
-		thisdog.name = namein;
-		thisdog.age = agein;
-		cout << "dog(ctor(name,age))\n";
-	}
-	~dog() { cout << "dog(dtor)\n"; }
-	void speak() {
-		cout << "I am a dog! my name is " << thisdog.name << " and I am " << thisdog.age << endl;
-	}
-	bbox dim() {
-		return dogbounds;
-	}
-	bbox dogbounds{ vec3{-1.f},vec3{1.f} };
-	id thisdog{ "doggo", 7 };
-};
 
 int main() {
 
