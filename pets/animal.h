@@ -27,7 +27,7 @@ struct id {
 class animal {
 public:
 	animal() {}
-	virtual ~animal() { std::cout << "animal(dtor)\n"; };
+	virtual ~animal() { std::cout << __func__ << std::endl; };
 	virtual void speak() = 0;
 	virtual bbox dim() = 0;
 };

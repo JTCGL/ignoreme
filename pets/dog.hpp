@@ -3,13 +3,13 @@
 
 class dog : public animal {
 	public:
-	dog() { std::cout << "dog(ctor())\n"; }
+	dog() { std::printf("%s\n", __func__); }
 	dog(const std::string namein, const 	uint16_t agein) {
 		thisdog.name = namein;
 		thisdog.age = agein;
-		std::cout << "dog(ctor(name,age))\n";
+		std::printf("%s\n", __func__);
 	}
-	~dog() { std::cout << "dog(dtor)\n"; }
+	~dog() { std::printf("%s\n", __func__); }
 
 	//copy/move? Want a collection of cats - pets - so be sure to only be checking the original!
 

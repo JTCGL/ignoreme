@@ -25,13 +25,16 @@ https://stackoverflow.com/questions/2989810/which-cross-platform-preprocessor-de
 
 #if defined(_WINDOWS)
 	#if defined(_WIN64)
-		cout << "std::string size:(win64)" << sizeof(string) << endl;
+		cout << "std::string size(win64): " << sizeof(string) << " Visual Studio vers: " << _MSC_VER << endl;
 	#else
 	#if defined(_WIN32)
-		cout << "std::string size:(win32)" << sizeof(string) << endl;
+		cout << "std::string size:(win32)" << sizeof(string) << " Visual Studio vers: " << _MSC_VER << endl;
 	#endif
 	#endif
 #else
+	#if defined(__linux__)
+		cout << "std::string size(linux):" << sizeof(string) << endl;
+	#endif
 	//unknown os
 	cout << "std::string size:(unknown system)" << sizeof(string) << endl;
 #endif
@@ -49,19 +52,27 @@ https://stackoverflow.com/questions/2989810/which-cross-platform-preprocessor-de
 	printf("sdasda, %f %f %f\n",myvec.x, myvec.y, myvec.z);
 	added();
 
-	//forget cats, we want a generc collection of animals - pets - of any type
+	//collection of animals - pets - of any type
 	const uint8_t numpets = 4;
 	vector<shared_ptr<animal>>pets(numpets);
 	for (auto p = 0; p < numpets; p++) {
-		if(p != numpets-1) {
-			//pets[p] = make_shared<cat>("boots",p);
-		//else
+		if(p == numpets-1) {
 			pets[p] = make_shared<dog>("sparky", p);
 		}
+		else {
+			pets[p] = make_shared<cat>("boots",p);
+		}
 	}
+	//pets.at(0).reset();
 	for (auto& pet : pets)
 	{
-		assert(pet);
+		assert(pet);//debug build only
+		if (pet == nullptr) //all builds, can still be gracefully (sort of) handled
+		{
+			cout << "pet is null!" << endl;
+			//printf("pet 0x%x is null!\n",&pet);
+			continue;
+		}
 		pet->speak();
 	}
 
