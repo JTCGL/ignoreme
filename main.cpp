@@ -53,13 +53,15 @@ https://stackoverflow.com/questions/2989810/which-cross-platform-preprocessor-de
 	const uint8_t numpets = 4;
 	vector<shared_ptr<animal>>pets(numpets);
 	for (auto p = 0; p < numpets; p++) {
-		if(p != numpets-1)
-			pets[p] = make_shared<cat>("boots",p);
-		else
+		if(p != numpets-1) {
+			//pets[p] = make_shared<cat>("boots",p);
+		//else
 			pets[p] = make_shared<dog>("sparky", p);
+		}
 	}
 	for (auto& pet : pets)
 	{
+		assert(pet);
 		pet->speak();
 	}
 
