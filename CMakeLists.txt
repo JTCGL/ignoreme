@@ -4,11 +4,13 @@ include_directories(
 	${PROJECT_SOURCE_DIR}/include
 	${PROJECT_SOURCE_DIR}/src
 	${PROJECT_SOURCE_DIR}/glad
+	${PROJECT_SOURCE_DIR}/imgui
 )
 file(GLOB SRCS
 	"${PROJECT_SOURCE_DIR}/include/*"
 	"${PROJECT_SOURCE_DIR}/src/*"
 	"${PROJECT_SOURCE_DIR}/glad/*"
+	"${PROJECT_SOURCE_DIR}/imgui/*"
 )
 add_definitions(-DGLES2)
 add_executable(ignoreme ${SRCS})
