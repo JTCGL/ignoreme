@@ -8,7 +8,7 @@
 #include <SDL2/SDL_opengles2.h>
 #include "triangle_renderer.hpp"
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
 	{
@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
 	SDL_GL_SetAttribute(SDL_GL_GREEN_SIZE, 8);
 	SDL_GL_SetAttribute(SDL_GL_BLUE_SIZE, 8);
 
-	SDL_Window* window = SDL_CreateWindow("Hello SDL2 OpenGL ES", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 640, 480, SDL_WINDOW_OPENGL);
+	SDL_Window *window = SDL_CreateWindow("Hello SDL2 OpenGL ES", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 640, 480, SDL_WINDOW_OPENGL);
 	if (window == NULL)
 	{
 		fprintf(stderr, "SDL_CreateWindow Error: %s\n", SDL_GetError());
@@ -40,9 +40,9 @@ int main(int argc, char* argv[])
 	// We will not actually need a context created, but we should create one
 	SDL_GL_CreateContext(window);
 
-#ifdef USE_GLAD
-	gladLoadGLES2Loader(SDL_GL_GetProcAddress);
-#endif
+	#ifdef USE_GLAD
+		gladLoadGLES2Loader(SDL_GL_GetProcAddress);
+	#endif
 
 	SDL_Log("Vendor   : %s", glGetString(GL_VENDOR));
 	SDL_Log("Renderer : %s", glGetString(GL_RENDERER));

@@ -1,10 +1,16 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.6.0)
 project(ignoreme)
-add_executable(ignoreme main.cpp)
 include_directories(
 	${PROJECT_SOURCE_DIR}/include
 	${PROJECT_SOURCE_DIR}/src
-	${PROJECT_SOURCE_DIR}/pets
-	${PROJECT_SOURCE_DIR}/glm
-	#The above line *needs* to be here to use bracket includes <> for glm - and you HAVE To refresh CMakeLists in Visual Studio for intellisense to pick up the path!
+	${PROJECT_SOURCE_DIR}/glad
 )
+file(GLOB SRCS
+	"${PROJECT_SOURCE_DIR}/include/*"
+	"${PROJECT_SOURCE_DIR}/src/*"
+	"${PROJECT_SOURCE_DIR}/glad/*"
+)
+add_definitions(-DGLES2)
+add_executable(ignoreme ${SRCS})
+find_package(SDL2 REQUIRED)
+target_link_libraries(ignoreme ${SDL2_LIBRARIES})
