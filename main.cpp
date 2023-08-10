@@ -5,15 +5,21 @@
 #include "glad.h"
 #endif
 
+#define IMGUI_IMPL_OPENGL_ES3
 #include "imgui.h"
 #include "imgui_impl_sdl.h"
 #include "imgui_impl_opengl3.h"
-#include <stdio.h>
-#include <SDL.h>
 
-#define IMGUI_IMPL_OPENGL_ES3
+//#include <SDL.h>
+//#include <SDL_opengles2.h>
+
+//#define SDL_MAIN_HANDLED
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_opengles2.h>
+
+
+
 //#undef SDL_USE_BUILTIN_OPENGL_DEFINITIONS
-#include <SDL_opengles2.h>
 
 /*
 #if defined(IMGUI_IMPL_OPENGL_ES2)
@@ -24,11 +30,13 @@
 */
 
 // Main code
-int main(int, char**)
+//int main(int, char**)
+int main(int argc, char* argv[])
 {
     // Setup SDL
     // (Some versions of SDL before <2.0.10 appears to have performance/stalling issues on a minority of Windows systems,
     // depending on whether SDL_INIT_GAMECONTROLLER is enabled or disabled.. updating to latest version of SDL is recommended!)
+    //SDL_SetMainReady();
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER) != 0)
     {
         printf("Error: %s\n", SDL_GetError());
@@ -74,12 +82,14 @@ int main(int, char**)
     SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
     SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, 8);
     SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
-    SDL_Window* window = SDL_CreateWindow("Dear ImGui SDL2+OpenGL3 example", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, window_flags);
+    SDL_Window* window = SDL_CreateWindow("Dear ImGui SDL2+OpenGL33333333333333333 example", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, window_flags);
     SDL_GLContext gl_context = SDL_GL_CreateContext(window);
     SDL_GL_MakeCurrent(window, gl_context);
     SDL_GL_SetSwapInterval(1); // Enable vsync
 
+#ifdef USE_GLAD
     gladLoadGLES2Loader(SDL_GL_GetProcAddress);
+#endif
 
     SDL_Log("Vendor   : %s", glGetString(GL_VENDOR));
     SDL_Log("Renderer : %s", glGetString(GL_RENDERER));
@@ -157,6 +167,12 @@ int main(int, char**)
             ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
 
             ImGui::Text("This is some useful text.");               // Display some text (you can use a format strings too)
+
+            ImGui::Text("Vendor   : %s", glGetString(GL_VENDOR));
+            ImGui::Text("Renderer   : %s", glGetString(GL_RENDERER));
+            ImGui::Text("Version   : %s", glGetString(GL_VERSION));
+            ImGui::Text("GLSL   : %s", glGetString(GL_SHADING_LANGUAGE_VERSION));
+
             ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
             ImGui::Checkbox("Another Window", &show_another_window);
 
