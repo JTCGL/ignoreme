@@ -127,7 +127,7 @@ int main(int argc, char* argv[])
     //IM_ASSERT(font != NULL);
 
     // Our state
-    bool show_demo_window = true;
+    bool show_demo_window = false;
     bool show_another_window = false;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
@@ -153,7 +153,39 @@ int main(int argc, char* argv[])
         // Start the Dear ImGui frame
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplSDL2_NewFrame();
+
         ImGui::NewFrame();
+
+        if (ImGui::BeginMainMenuBar())
+        {
+
+            if (ImGui::BeginMenuBar())
+            {
+                if (ImGui::BeginMenu("File"))
+                {
+                    //IMGUI_DEMO_MARKER("Menu/File");
+                    //ShowExampleMenuFile();
+                    ImGui::MenuItem("Menu item");
+
+                    if (ImGui::BeginMenu("More.."))
+                    {
+                        ImGui::MenuItem("Hello");
+                        ImGui::MenuItem("Sailor");
+                        if (ImGui::BeginMenu("Recurse.."))
+                        {
+                            //ShowExampleMenuFile();
+                            ImGui::MenuItem("Nested Menu item");
+                            ImGui::EndMenu();
+                        }
+                        ImGui::EndMenu();
+                    }
+
+                    ImGui::EndMenu();
+                }
+                ImGui::EndMenuBar();
+            }
+            ImGui::EndMainMenuBar();
+        }
 
         // 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
         if (show_demo_window)
@@ -164,7 +196,37 @@ int main(int argc, char* argv[])
             static float f = 0.0f;
             static int counter = 0;
 
-            ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
+            ImGuiWindowFlags flags = ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_MenuBar;
+            bool opened = false;
+
+            ImGui::Begin("Hello, world!", &opened, flags);                          // Create a window called "Hello, world!" and append into it.
+            if (ImGui::BeginMenuBar())
+            {
+                if (ImGui::BeginMenu("Menu"))
+                {
+                    //IMGUI_DEMO_MARKER("Menu/File");
+                    //ShowExampleMenuFile();
+                    ImGui::MenuItem("Menu item");
+                    if (ImGui::MenuItem("Redo", "CTRL+Y", false, false)) {}  // Disabled item
+                    ImGui::Separator();
+
+                    if (ImGui::BeginMenu("More.."))
+                    {
+                        ImGui::MenuItem("Hello");
+                        ImGui::MenuItem("Sailor");
+                        if (ImGui::BeginMenu("Recurse.."))
+                        {
+                            //ShowExampleMenuFile();
+                            ImGui::MenuItem("Nested Menu item");
+                            ImGui::EndMenu();
+                        }
+                        ImGui::EndMenu();
+                    }
+
+                    ImGui::EndMenu();
+                }
+                ImGui::EndMenuBar();
+            }
 
             ImGui::Text("This is some useful text.");               // Display some text (you can use a format strings too)
 
@@ -172,6 +234,13 @@ int main(int argc, char* argv[])
             ImGui::Text("Renderer   : %s", glGetString(GL_RENDERER));
             ImGui::Text("Version   : %s", glGetString(GL_VERSION));
             ImGui::Text("GLSL   : %s", glGetString(GL_SHADING_LANGUAGE_VERSION));
+            
+            //fflush(stdout);
+            printf("oshit!\n");
+            char str[90];
+            fgets(&str[0], 89, stdout);
+            //fflush(stdout);
+            ImGui::Text("%s", str);
 
             ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
             ImGui::Checkbox("Another Window", &show_another_window);
