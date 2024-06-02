@@ -1,0 +1,3 @@
+C:/Users/Jesse/source/repos/JTCGL/ignoreme/out/build/x64-Release/CMakeFiles/ignoreme.dir
+C:/Users/Jesse/source/repos/JTCGL/ignoreme/out/build/x64-Release/CMakeFiles/ALL_BUILD.dir
+C:/Users/Jesse/source/repos/JTCGL/ignoreme/out/build/x64-Release/CMakeFiles/ZERO_CHECK.dir

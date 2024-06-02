@@ -7587,6 +7587,7 @@ static void ShowExampleAppCustomRendering(bool* p_open)
             draw_list->AddRectFilled(ImVec2(x, y), ImVec2(x + thickness, y + sz), col);                             x += spacing * 2.0f;// Vertical line (faster than AddLine, but only handle integer thickness)
             draw_list->AddRectFilled(ImVec2(x, y), ImVec2(x + 1, y + 1), col);                                      x += sz;            // Pixel (faster than AddLine)
             draw_list->AddRectFilledMultiColor(ImVec2(x, y), ImVec2(x + sz, y + sz), IM_COL32(0, 0, 0, 255), IM_COL32(255, 0, 0, 255), IM_COL32(255, 255, 0, 255), IM_COL32(0, 255, 0, 255));
+            //draw_list->AddText(ImVec2(x + sz, y + sz), 0xffffffff, "wut");
 
             ImGui::Dummy(ImVec2((sz + spacing) * 10.2f, (sz + spacing) * 3.0f));
             ImGui::PopItemWidth();
@@ -7670,21 +7671,36 @@ static void ShowExampleAppCustomRendering(bool* p_open)
                 adding_line = false;
                 if (ImGui::MenuItem("Remove one", NULL, false, points.Size > 0)) { points.resize(points.size() - 2); }
                 if (ImGui::MenuItem("Remove all", NULL, false, points.Size > 0)) { points.clear(); }
+
+                bool cidl = false;
+                ImGui::Checkbox("checkbox in drawlist?", &cidl);
+                ImGui::Text("text in draw list?");
+
                 ImGui::EndPopup();
             }
 
             // Draw grid + all lines in the canvas
             draw_list->PushClipRect(canvas_p0, canvas_p1, true);
+            draw_list->AddText(origin, IM_COL32(255, 255, 0, 255), "Begin");
             if (opt_enable_grid)
             {
                 const float GRID_STEP = 64.0f;
                 for (float x = fmodf(scrolling.x, GRID_STEP); x < canvas_sz.x; x += GRID_STEP)
                     draw_list->AddLine(ImVec2(canvas_p0.x + x, canvas_p0.y), ImVec2(canvas_p0.x + x, canvas_p1.y), IM_COL32(200, 200, 200, 40));
                 for (float y = fmodf(scrolling.y, GRID_STEP); y < canvas_sz.y; y += GRID_STEP)
-                    draw_list->AddLine(ImVec2(canvas_p0.x, canvas_p0.y + y), ImVec2(canvas_p1.x, canvas_p0.y + y), IM_COL32(200, 200, 200, 40));
+                    draw_list->AddLine(ImVec2(canvas_p0.x, canvas_p0.y + y), ImVec2(canvas_p1.x, canvas_p0.y + y), IM_COL32(255, 200, 200, 40));
             }
-            for (int n = 0; n < points.Size; n += 2)
+            for (int n = 0; n < points.Size; n += 2) {
                 draw_list->AddLine(ImVec2(origin.x + points[n].x, origin.y + points[n].y), ImVec2(origin.x + points[n + 1].x, origin.y + points[n + 1].y), IM_COL32(255, 255, 0, 255), 2.0f);
+                draw_list->AddText(ImVec2(origin.x + points[n].x, origin.y + points[n].y), IM_COL32(255, 0, 0, 255), "Line Begin");
+                draw_list->AddText(ImVec2(origin.x + points[n + 1].x, origin.y + points[n + 1].y), IM_COL32(255, 0, 0, 255), "Line End");
+            }
+
+            //if(!points.empty())
+                //draw_list->AddText(ImVec2(origin.x + points[0].x, origin.y + points[0].y), IM_COL32(255, 255, 0, 255), "Line Begin");
+            
+            //draw_list->AddCallback();
+
             draw_list->PopClipRect();
 
             ImGui::EndTabItem();
