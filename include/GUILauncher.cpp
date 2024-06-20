@@ -2,6 +2,7 @@
 #include "GUIDirectoryBrowser.hpp"
 #include "GUIFileBrowser.hpp"
 #include "GUIMessageDlg.hpp"
+#include "GUITestbed.hpp"
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -14,6 +15,7 @@ bool showdirectorybrowser = false;
 bool showfilepicker = false;
 bool showmsgdlg = false;
 bool supressefuturemsgdlg = false;
+bool showuitestbed = false;
 std::filesystem::path rp = "";
 std::filesystem::path filepicked = "";
 
@@ -59,7 +61,7 @@ void showlauncher(bool* p_open) {
 	//ImGui::SetNextWindowBgAlpha(0.f);
 	if (ImGui::Button("Shader Editor")) {
 		//toggleshaderedit = toggleshaderedit ? true : false;
-		showshadereditor ? (showshadereditor=false) : (showshadereditor=true);
+		showshadereditor ? (showshadereditor = false) : (showshadereditor = true);
 	}
 	if (ImGui::Button("Program Linker")) {
 		showprogramlinker ? (showprogramlinker = false) : (showprogramlinker = true);
@@ -88,8 +90,12 @@ void showlauncher(bool* p_open) {
 		}
 	}
 
+	if (ImGui::Button("UI Testbed")) {
+		showuitestbed ? (showuitestbed = false) : (showuitestbed = true);
+	}
+
 	if (showmsgdlg && !supressefuturemsgdlg) {
-		showmessagedlgex(&showmsgdlg, "messagebox title", "message main text",nullptr, iconseverity::ICOWARNING, &supressefuturemsgdlg, false);
+		showmessagedlgex(&showmsgdlg, "messagebox title", "message main text", nullptr, iconseverity::ICOWARNING, &supressefuturemsgdlg, false);
 	}
 
 	if (showprogramlinker) {
@@ -99,11 +105,15 @@ void showlauncher(bool* p_open) {
 
 	if (showdirectorybrowser) {
 		//showdirbrowser(&showdirectorybrowser);
-		showdirbrowsermodal(&showdirectorybrowser,&rp);
+		showdirbrowsermodal(&showdirectorybrowser, &rp);
+	}
+
+	if (showuitestbed) {
+		showtestbeddlg(&showuitestbed);
 	}
 
 	if (showfilepicker) {
-		showfilepickerdlg(&showfilepicker, &filepicked,true);
+		showfilepickerdlg(&showfilepicker, &filepicked, true);
 		//only relevant for saving files
 		if (!fs::exists(filepicked)) {
 			std::ofstream{ filepicked };
