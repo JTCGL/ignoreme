@@ -1,0 +1,107 @@
+[
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c99 -o CMakeFiles/ignoreme.dir/glad/glad.c.o -c /storage/emulated/0/repos/glad/glad.c",
+  "file": "/storage/emulated/0/repos/glad/glad.c"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/imgui/imgui.cpp.o -c /storage/emulated/0/repos/imgui/imgui.cpp",
+  "file": "/storage/emulated/0/repos/imgui/imgui.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/imgui/imgui_demo.cpp.o -c /storage/emulated/0/repos/imgui/imgui_demo.cpp",
+  "file": "/storage/emulated/0/repos/imgui/imgui_demo.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/imgui/imgui_draw.cpp.o -c /storage/emulated/0/repos/imgui/imgui_draw.cpp",
+  "file": "/storage/emulated/0/repos/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/imgui/imgui_impl_opengl3.cpp.o -c /storage/emulated/0/repos/imgui/imgui_impl_opengl3.cpp",
+  "file": "/storage/emulated/0/repos/imgui/imgui_impl_opengl3.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/imgui/imgui_impl_sdl.cpp.o -c /storage/emulated/0/repos/imgui/imgui_impl_sdl.cpp",
+  "file": "/storage/emulated/0/repos/imgui/imgui_impl_sdl.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/imgui/imgui_impl_sdlrenderer.cpp.o -c /storage/emulated/0/repos/imgui/imgui_impl_sdlrenderer.cpp",
+  "file": "/storage/emulated/0/repos/imgui/imgui_impl_sdlrenderer.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/imgui/imgui_tables.cpp.o -c /storage/emulated/0/repos/imgui/imgui_tables.cpp",
+  "file": "/storage/emulated/0/repos/imgui/imgui_tables.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/imgui/imgui_widgets.cpp.o -c /storage/emulated/0/repos/imgui/imgui_widgets.cpp",
+  "file": "/storage/emulated/0/repos/imgui/imgui_widgets.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/imgui/misc/cpp/imgui_stdlib.cpp.o -c /storage/emulated/0/repos/imgui/misc/cpp/imgui_stdlib.cpp",
+  "file": "/storage/emulated/0/repos/imgui/misc/cpp/imgui_stdlib.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/include/GUIDirectoryBrowser.cpp.o -c /storage/emulated/0/repos/include/GUIDirectoryBrowser.cpp",
+  "file": "/storage/emulated/0/repos/include/GUIDirectoryBrowser.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/include/GUIFileBrowser.cpp.o -c /storage/emulated/0/repos/include/GUIFileBrowser.cpp",
+  "file": "/storage/emulated/0/repos/include/GUIFileBrowser.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/include/GUILauncher.cpp.o -c /storage/emulated/0/repos/include/GUILauncher.cpp",
+  "file": "/storage/emulated/0/repos/include/GUILauncher.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/include/GUIMessageDlg.cpp.o -c /storage/emulated/0/repos/include/GUIMessageDlg.cpp",
+  "file": "/storage/emulated/0/repos/include/GUIMessageDlg.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/include/GUIShaderEdit.cpp.o -c /storage/emulated/0/repos/include/GUIShaderEdit.cpp",
+  "file": "/storage/emulated/0/repos/include/GUIShaderEdit.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/include/GUITestbed.cpp.o -c /storage/emulated/0/repos/include/GUITestbed.cpp",
+  "file": "/storage/emulated/0/repos/include/GUITestbed.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/include/glres.cpp.o -c /storage/emulated/0/repos/include/glres.cpp",
+  "file": "/storage/emulated/0/repos/include/glres.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/include/glshader.cpp.o -c /storage/emulated/0/repos/include/glshader.cpp",
+  "file": "/storage/emulated/0/repos/include/glshader.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/include/platform.cpp.o -c /storage/emulated/0/repos/include/platform.cpp",
+  "file": "/storage/emulated/0/repos/include/platform.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/src/triangle_renderer.cpp.o -c /storage/emulated/0/repos/src/triangle_renderer.cpp",
+  "file": "/storage/emulated/0/repos/src/triangle_renderer.cpp"
+},
+{
+  "directory": "/storage/emulated/0/repos",
+  "command": "/data/user/0/ru.iiec.cxxdroid/files/bin/clang++ -DGLES2 -I/storage/emulated/0/repos/include -I/storage/emulated/0/repos/src -I/storage/emulated/0/repos/glad -I/storage/emulated/0/repos/imgui -I/storage/emulated/0/repos/imgui/backends -I/storage/emulated/0/repos/imgui/misc/cpp -Wall -std=c++17 -std=gnu++17 -o CMakeFiles/ignoreme.dir/main.cpp.o -c /storage/emulated/0/repos/main.cpp",
+  "file": "/storage/emulated/0/repos/main.cpp"
+}
+]

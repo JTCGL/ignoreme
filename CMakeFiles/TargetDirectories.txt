@@ -1,0 +1,3 @@
+/storage/emulated/0/repos/CMakeFiles/rebuild_cache.dir
+/storage/emulated/0/repos/CMakeFiles/edit_cache.dir
+/storage/emulated/0/repos/CMakeFiles/ignoreme.dir
